@@ -73,7 +73,7 @@ const Game = () => {
   }
 
   return (
-    <Box>
+    <Box sx={{width:"100%",height:"auto"}}>
       <Container>
         <Box
           sx={{
