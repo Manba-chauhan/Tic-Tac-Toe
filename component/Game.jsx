@@ -85,22 +85,22 @@ const Game = () => {
         >
           <Typography
             sx={{
-              fontSize: "45px",
+              fontSize: { xs: "25px", sm: "40px", md: "45px" },
               textAlign: "center",
               color: "blueviolet",
               fontWeight: 600,
-              textDecoration:"underline"
+              textDecoration: "underline",
             }}
           >
             Tic-Tac-Toe Game
           </Typography>
-            
+
           <br />
           <Typography
             sx={{
-              fontSize: "40px",
+              fontSize: { xs: "25px", sm: "40px", md: "45px" },
               textAlign: "center",
-              color: winner? 'green' : draw ? 'red':'green',
+              color: winner ? "green" : draw ? "red" : "green",
               fontWeight: 600,
             }}
           >
