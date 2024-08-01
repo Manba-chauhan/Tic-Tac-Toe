@@ -8,7 +8,7 @@ const Square = ({ value, onSquareClick, isWinningSquare, isDraw }) => {
       variant="outlined"
       onClick={onSquareClick}
       sx={{
-        height: { xs: 60, sm: 100, md: 150 },
+        height: { xs: 100, sm: 100, md: 150 },
         color: "white",
         fontSize: "30px",
         bgcolor: isWinningSquare
