@@ -4,12 +4,20 @@ import Board from "./Board";
 import { Box, Button, Container, Divider, Typography } from "@mui/material";
 
 const Game = () => {
+  // State for the game board, which is an array of 9 nulls initially
   const [square, setSquare] = useState(Array(9).fill(null));
+
+  // State to keep track of the next player (X or O)
   const [isXnext, setIsXnext] = useState(true);
+  // State to count the number of moves made
   const [movecount, setMoveCount] = useState(0);
+  // State to check if the game ended in a draw
   const [draw, setDraw] = useState(false);
+// An array holding the indices of the winning squares if there's a winner.
+  
   const [winningSquares, setWinningSquares] = useState([]);
 
+  // Function to calculate if there is a winner
   const calculateWinner = (squares) => {
     const lines = [
       [0, 1, 2],
@@ -35,6 +43,7 @@ const Game = () => {
     return { winner: null, line: [] };
   };
 
+  // Function to handle a square being clicked
   const handleClick = (index) => {
     const newSquares = square.slice();
     const { winner } = calculateWinner(newSquares);
@@ -54,6 +63,7 @@ const Game = () => {
     }
   };
 
+  // Function to reset the game
   const reloadGame = () => {
     setSquare(Array(9).fill(null));
     setIsXnext(true);
@@ -61,7 +71,7 @@ const Game = () => {
     setDraw(false);
     setWinningSquares([]);
   };
-
+  // Calculate the winner
   const { winner } = calculateWinner(square);
   let status
   if (winner) {
@@ -73,7 +83,7 @@ const Game = () => {
   }
 
   return (
-    <Box sx={{width:"100%",height:"auto"}}>
+    <Box sx={{ width: "100%", height: "auto" }}>
       <Container>
         <Box
           sx={{
