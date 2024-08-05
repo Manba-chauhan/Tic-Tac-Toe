@@ -16,6 +16,10 @@ This is a simple Tic-Tac-Toe game built using Next.js, React, and Material-UI. T
 - React
 - Material-UI
 
+## Visit my Game
+- https://tic-tac-toe-nine-smoky.vercel.app/
+  
+
 ##  Getting Started 🚀
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
